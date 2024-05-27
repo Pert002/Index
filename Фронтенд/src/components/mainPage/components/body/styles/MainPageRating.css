@@ -1,0 +1,38 @@
+.main-page-rating__header {
+    font-size: 30px;
+}
+
+.main-page-rating__table {
+    width: 66%;
+}
+
+.main-page-rating__table table {
+    display: table;
+    width: 100%;
+    font-size: 20px;
+}
+
+.main-page-rating__table tr {
+    border-top: 1px solid #0a0a0a;
+}
+
+.main-page-rating__table__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #0a0a0a;
+    width: 100%;
+    text-align: center;
+}
+
+.main-page-rating__table__link:visited {
+    color: #0a0a0a;
+}
+
+.main-page-rating__table__link td {
+    width: 30%;
+    padding: 10px 0;
+}
+
+.main-page-rating__table__link td:first-child:hover {
+    text-decoration: underline;
+}

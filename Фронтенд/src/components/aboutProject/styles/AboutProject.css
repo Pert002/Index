@@ -1,0 +1,23 @@
+.about-project {
+    background-color: #D3D3D3;
+}
+
+.about-project__content {
+    font-size: 20px;
+    padding: 40px;
+}
+
+.about-project__content p {
+    padding: 10px;
+}
+
+.about-project__content li {
+    list-style-image: url("../images/dot.webp");
+    margin-left: 15px;
+}
+
+.algorithm {
+    width: 100%;
+    height: 100%;
+}
+

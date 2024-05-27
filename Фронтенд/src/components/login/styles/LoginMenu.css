@@ -1,0 +1,47 @@
+.login__menu {
+    background-color: #474747;
+    background: url("../../../images/header_bg.png") repeat;
+    color: #eeeeee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    width: 25%;
+    line-height: 1.5;
+}
+
+.login-logo {
+    cursor: pointer;
+    font-size: 70px;
+    padding: 30px 0;
+    border: none;
+}
+
+.login__menu-text {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 25px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.login__menu-text::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid white;
+    bottom: 0;
+    left: 0;
+}
+
+.login-menu-button {
+    cursor: pointer;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.login-menu-button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,27 @@
+.b-main {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #D3D3D3;
+}
+
+.b-main__content {
+    display: flex;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+}
+
+.aside-content {
+    width: 35%;
+    background: #f9f9f9;
+}
+
+.main-page-news-title {
+    text-align: center;
+    padding: 20px 0;
+}

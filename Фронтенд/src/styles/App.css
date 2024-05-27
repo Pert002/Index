@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'HSE Sans';
+    src: url('../fonts/HSE/HSESans-Regular.woff') format('woff')
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'HSE Sans';
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+}
+
+
+.wrapper {
+    margin: 0 auto;
+    padding: 10px 30px;
+    max-width: 1280px;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    margin: 0 15%;
+    padding-top: 80px;
+    background-color: white;
+    min-height: 80vh;
+    position: relative;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #0a0a0a;
+}
+button {
+    box-shadow: none;
+    border: none;
+}
+
+button:active {
+    box-shadow: none;
+    border: none;
+}
+
+input:focus, textarea:focus {
+    outline: rgb(35, 75, 155, 0.75) 1px solid;
+}

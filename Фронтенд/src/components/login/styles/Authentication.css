@@ -1,0 +1,39 @@
+.authentication {
+    display: flex;
+    min-height: 100vh;
+}
+
+.auth__content {
+    width: 80%;
+}
+
+.auth__content__title {
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    height: 15%;
+    font-weight: 100;
+    opacity: 0.9;
+}
+
+.auth__content__centercolumn {
+    background-color: #D3D3D3;
+    height: 85%;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-button, .reg-button, .passres-button {
+    cursor: pointer;
+    width: 500px;
+    height: 50px;
+    font-size: 1.3em;
+    color: #FAFAFA;
+    border-radius: 10px;
+    background-color: #222222;
+}

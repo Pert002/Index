@@ -1,0 +1,27 @@
+.footer {
+    background: url("../../../../../images/header_bg.png") repeat;
+    color: #FAFAFA;
+    padding: 30px 0;
+    font-size: 18px;
+}
+
+.footer__contacts {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__contacts__item {
+    width: 20%;
+}
+
+.footer__contacts__item__title {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footer__contacts__form {
+    color: crimson;
+    cursor: pointer;
+}

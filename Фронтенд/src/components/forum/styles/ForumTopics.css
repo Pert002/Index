@@ -1,0 +1,84 @@
+.forum-topics {
+    background-color: #D3D3D3;
+}
+
+.forum-topics__content {
+    font-size: 20px;
+    padding: 40px;
+}
+
+.forum-topics__title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.topics {
+    width: 100%;
+    border: 1px solid rgb(35, 75, 155, 0.75);
+    border-bottom: 0;
+    border-spacing: 0;
+}
+
+.topics__theme {
+    background-color: rgb(35, 75, 155, 0.5);
+    font-size: 23px;
+    padding: 5px;
+    text-align: left;
+    width: 75%;
+}
+
+.topics__topic {
+    text-align: left;
+    font-size: 21px;
+    padding: 5px;
+    position: relative;
+}
+
+.topics__topic a {
+    color: rgb(35, 75, 155, 0.75);
+    text-decoration: underline;
+}
+
+.topics__topic-delete {
+    position: absolute;
+    cursor: pointer;
+    background: url('../images/cross__red.png') no-repeat;
+    background-size: cover;
+
+    height: 30px;
+    width: 30px;
+    left: -30px;
+}
+
+.topics td {
+    border-bottom: 1px solid rgb(35, 75, 155, 0.75);
+}
+
+.forum-topics__button {
+    background-color: rgb(15, 45, 105, 0.5);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.forum-messages__new-forum-textarea label {
+    display: block;
+    font-size: 24px;
+}
+
+.forum-messages__new-forum-textarea input {
+    display: block;
+    width: 350px;
+    font-size: 1em;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.forum-messages__send-new-forum {
+    margin-right: 30px;
+}
+
+
+

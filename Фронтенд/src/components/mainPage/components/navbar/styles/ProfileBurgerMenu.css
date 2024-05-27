@@ -1,0 +1,59 @@
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    background: url("../../../../../images/user.png") no-repeat;
+    background-size: cover;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    color: rgb(191, 191, 191);
+    border-radius: 8px;
+    transition-delay: 0.5s;
+}
+
+.open .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: -30px;
+    background-color: #474747;
+    border: 1px solid #2f353b;
+    z-index: 1;
+}
+
+.open .menu-items::before {
+    content: '';
+    z-index: -1;
+    top: -40px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.menu-item {
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.menu-item:hover {
+    background-color: #4c5866;
+    border-bottom: #0a0a0a;
+}

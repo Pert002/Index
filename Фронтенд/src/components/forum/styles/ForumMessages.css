@@ -1,0 +1,74 @@
+.forum-messages {
+    background-color: #D3D3D3;
+    position: relative;
+}
+
+.forum-messages__content {
+    font-size: 20px;
+    padding: 40px;
+}
+
+.forum-messages__title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+.forum-messages__message {
+    position: relative;
+    border: 2px solid rgb(35, 75, 155, 0.75);
+    padding: 10px;
+    padding-bottom: 70px;
+    margin-bottom: 30px;
+}
+
+.topics__message-delete {
+    position: absolute;
+    cursor: pointer;
+    background: url('../images/cross__red.png') no-repeat;
+    background-size: cover;
+
+    height: 30px;
+    width: 30px;
+    left: -30px;
+}
+
+.forum-messages__textarea {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.forum-messages__textarea textarea {
+    font-size: 24px;
+    width: 90%;
+    padding: 10px 25px 10px 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.clear-textarea {
+    position: absolute;
+    top: 5px;
+    right: 70px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/cross.svg") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.forum-messages__send-message {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 7px;
+    background: url("../images/send.svg") no-repeat;
+    background-position: center;
+    background-color: rgb(15, 45, 105, 0.5);
+    background-size: 30px;
+}

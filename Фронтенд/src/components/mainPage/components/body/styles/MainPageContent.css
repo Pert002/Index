@@ -1,0 +1,12 @@
+.main-page-content {
+    font-size: 1.5rem;
+}
+
+.main-page-content__text {
+    padding: 30px;
+}
+
+.main-page-content__list__item {
+    list-style-image: url("../mainFrame/images/dot.webp");
+    margin-left: 15px;
+}

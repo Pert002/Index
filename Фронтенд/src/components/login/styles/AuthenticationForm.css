@@ -1,0 +1,55 @@
+.auth__content__email,
+.auth__content__password,
+.reg__content__full-name,
+.reg__content__email,
+.reg__content__password,
+.passres__content__email  {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    color: #222222;
+}
+
+input {
+    padding: 8px;
+    width: 500px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid #D3D3D3;
+    font-weight: 400;
+    height: 50px;
+}
+
+input::placeholder {
+    color: #bbbbbb;
+}
+
+input:focus {
+    border: 1px solid #D3D3D3;
+}
+
+.view-password {
+    position: absolute;
+    background: url("../../../images/eye_crossed.svg") no-repeat;
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    top: 25%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.view-password:active {
+    opacity: 0.5;
+}
+
+.input-container {
+    position: relative;
+}
+
+

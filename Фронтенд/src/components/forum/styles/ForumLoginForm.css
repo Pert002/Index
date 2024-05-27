@@ -1,0 +1,78 @@
+.forum__login-form {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.forum__login-form__bg {
+    background-color: hsla(0, 0%, 0%, .7);
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 1001;
+}
+
+.forum__login-form__content {
+    position: relative;
+    min-height: 300px;
+    max-height: 90%;
+    width: 33%;
+    padding: 25px;
+    z-index: 1002;
+
+    background: #D3D3D3;
+    border-radius: 10px;
+}
+
+.forum__login-form__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url('../images/cross.svg') no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    transition: background 0.1s ease-in-out;
+}
+
+.forum__login-form__title {
+    padding-left: 20px;
+    font-size: 30px;
+    color: rgb(205, 90, 90, 1);
+}
+
+.forum__login-form__text {
+    margin: 15px 0;
+    font-size: 23px;
+}
+
+.forum__login-form__email, .forum__login-form__password {
+    height: 120px;
+}
+
+.forum__login-form__button {
+    padding: 15px;
+    font-size: 23px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+}
+
+.forum__login-form__button:hover {
+    background-color: rgb(191, 191, 191, 1);
+}
+
+.forum__login-form__button:active {
+    background-color: rgb(166, 166, 166, 0.8);
+}

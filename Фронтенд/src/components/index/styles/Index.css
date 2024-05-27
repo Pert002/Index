@@ -1,0 +1,170 @@
+.index {
+    background-color: #D3D3D3;
+}
+
+.index__content {
+    font-size: 25px;
+    padding: 40px;
+    position: relative;
+}
+
+
+.index__button__year {
+
+}
+
+.index__button, .index__button__selected {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.index__button__selected {
+    background-color: rgb(205, 90, 90);
+    border: 1px solid rgb(230, 30, 60);
+}
+
+.index__chart__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.index__content__not-selected {
+    position: absolute;
+    text-align: center;
+    margin: auto 0;
+    width: 500px;
+    top: 100%;
+    right: 33.3%;
+}
+
+.index__chart__title {
+    margin: 0 auto;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.index__chart__jointIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+.index__chart__jointIndex .index__chart {
+    height: 500px;
+    width: 100%;
+}
+
+.joint-index__summary {
+    position: absolute;
+    top: 56%;
+    font-size: 22px;
+    text-align: center;
+}
+
+.separate-index__summary {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    text-align: center;
+}
+
+.index__chart__separateIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.separateIndex {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+}
+
+.separateIndex__charts {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.index__chart__selection {
+    padding-top: 40px;
+}
+
+.chart__selection__buttons {
+    display: flex;
+    justify-content: space-between;
+    border: 2px #0a0a0a solid;
+}
+
+.selected-chart__selection__buttons {
+    display: flex;
+    justify-content: space-between;
+    border: 2px #0a0a0a solid;
+    border-top: none;
+}
+
+.chart__selection__buttons .index__button,
+.chart__selection__buttons .index__button__selected,
+.selected-chart__selection__buttons .index__button,
+.selected-chart__selection__buttons .index__button__selected {
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    font-size: 20px;
+    border-radius: 0;
+    border: none;
+    border-right: 1px #0a0a0a solid;
+}
+
+.chart__selection__buttons .index__button:last-child,
+.chart__selection__buttons .index__button__selected:last-child,
+.selected-chart__selection__buttons .index__button:last-child,
+.selected-chart__selection__buttons .index__button__selected:last-child {
+    border-right: none;
+}
+
+.index__chart__barIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+.index__chart__barIndex .index__chart {
+    height: 500px;
+    width: 100%;
+    font-size: 25px;
+}
+
+.chart__download__button {
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    height: 50px;
+    width: 50px;
+    background: url("../images/download_icon.svg") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+.w-full {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .md\:w-30rem {
+        width: 30rem;
+    }
+}
