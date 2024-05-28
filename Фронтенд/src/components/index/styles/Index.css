@@ -87,7 +87,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 7px;
 }
 
 .separateIndex__charts {
@@ -95,6 +96,11 @@
     width: 100%;
     align-items: center;
     margin-bottom: 40px;
+}
+
+.separateIndex .index__chart {
+    height: 350px;
+    width: 100%;
 }
 
 .index__chart__selection {

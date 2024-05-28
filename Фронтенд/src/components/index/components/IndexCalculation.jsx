@@ -84,7 +84,7 @@ const IndexCalculation = () => {
                 setIsLoading(false);
                 return
             } else {
-                const chartData = calculateIndexCalculationChartData(response, 'Индекс')
+                const chartData = calculateIndexCalculationChartData(response, 'Общий индекс')
                 setJointData(chartData);
                 setJointIndex( Math.round( response.index * 10) / 10 );
                 setHasData(true);
@@ -97,8 +97,8 @@ const IndexCalculation = () => {
                 right: rightData
             } = separateResponse.data
 
-            const leftChartData = calculateIndexCalculationChartData(leftData, 'Индекс2')
-            const rightChartData = calculateIndexCalculationChartData(rightData, 'Индекс3')
+            const leftChartData = calculateIndexCalculationChartData(leftData, 'Индекс по итогам квартала')
+            const rightChartData = calculateIndexCalculationChartData(rightData, 'Прогнозируемый индекс')
 
             setLeftIndex( Math.round( leftData.index * 10) / 10 );
             setRightIndex( Math.round( rightData.index * 10) / 10 );
@@ -119,7 +119,7 @@ const IndexCalculation = () => {
         }
     }, [selectedYear, selectedQuarter, handleGetIndex]);
 
-    const handleGetSelectedChart = async (selectedChartButton) => {
+    const handleGetSelectedChart = async (selectedChartButton, chartArray) => {
         const chart = `${selectedChart}Index`;
         if (selectedChart === 'branch') {
             const index = selectedChartButton - 1;
@@ -127,7 +127,7 @@ const IndexCalculation = () => {
         }
         try {
             const response = (await api[chart](selectedYear, selectedQuarter, selectedChartButton)).data;
-            const chartData = calculateIndexCalculationChartData(response, 'Индекс4');
+            const chartData = calculateIndexCalculationChartData(response, `${chartArray[selectedChartButton - 1]}`);
 
             setBarIndex( Math.round( response.index * 10) / 10 );
             setBarData(chartData);
@@ -171,7 +171,6 @@ const IndexCalculation = () => {
                 }
                 const data = response.data;
 
-                // В зависимости от значения clickedIndex, получите необходимые данные из ответа
                 let selectedData;
                 switch (clickedIndex) {
                     case 1:
@@ -249,7 +248,7 @@ const IndexCalculation = () => {
                             index ={jointIndex}
                         />
                     </div>
-                    <div className="index__chart__separateIndex">
+
                         <div className="index__chart__title">Индекс по
                             итогам {selectedQuarter} квартала {selectedYear} г. и перспективам роста
                             в {(selectedQuarter + 1) % 4} квартале {selectedYear + 1} г.
@@ -270,9 +269,7 @@ const IndexCalculation = () => {
                                 />
                             </div>
                         </div>
-                    </div>
-                        <div className="
-">
+                    <div className="">
                         <div className="chart__selection__buttons">
                             {selectionButtonsData.map((data, index) => (
                                 <IndexButton
@@ -327,7 +324,7 @@ const IndexCalculation = () => {
                             onClick={() => {
                                 setSelectedChartButton(item);
                                 setClickedIndex(null);
-                                handleGetSelectedChart(index + 1);
+                                handleGetSelectedChart(index + 1, chartArray);
                             }}
                             isSelected={(selectedChartButton === item) && !clickedIndex}
                         />

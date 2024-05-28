@@ -15,7 +15,6 @@ const RenderChartContent = ({ chartType, chartData, index, selectedChart, onClic
                     },
                     x: {
                         ticks: {
-                            maxRotation: 0,
                             font: {
                                 size: 13,
                             },
