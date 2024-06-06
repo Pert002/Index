@@ -12,6 +12,7 @@ import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import RenderChartContent from "./RenderChartContent";
 import {calculateClickedIndex} from "../../../helpers/chart/index-calculation-selected-bar";
+import {useSelector} from "react-redux";
 
 Chart.register(annotationPlugin);
 
@@ -20,7 +21,7 @@ export const DEFAULT_VALUE = {
     datasets: [{
         label: 'Индекс',
         data: [],
-        backgroundColor: [],
+        backgroundColor: ['rgb(191, 191, 191)'],
         hoverOffset: 4
     }]
 }
@@ -31,6 +32,7 @@ const IndexCalculation = () => {
     const [selectedButton, setSelectedButton] = useState(null);
     const [selectedChart, setSelectedChart] = useState(null);
     const [selectedChartButton, setSelectedChartButton] = useState(null);
+    const chartsColor = useSelector((state) => state.chartsColor.color);
 
     const [hasData, setHasData] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -66,7 +68,7 @@ const IndexCalculation = () => {
                     orientation: 'portrait',
                 });
 
-                doc.addImage(img, 'PNG', 10, 10, content.offsetWidth, content.offsetHeight); // Параметры: base64ImageData, format, x, y, width, height
+                doc.addImage(img, 'PNG', 10, 10, content.offsetWidth, content.offsetHeight);
 
                 doc.save('content.pdf');
             });
@@ -84,7 +86,7 @@ const IndexCalculation = () => {
                 setIsLoading(false);
                 return
             } else {
-                const chartData = calculateIndexCalculationChartData(response, 'Общий индекс')
+                const chartData = calculateIndexCalculationChartData(response, 'Общий индекс', chartsColor)
                 setJointData(chartData);
                 setJointIndex( Math.round( response.index * 10) / 10 );
                 setHasData(true);
@@ -97,8 +99,8 @@ const IndexCalculation = () => {
                 right: rightData
             } = separateResponse.data
 
-            const leftChartData = calculateIndexCalculationChartData(leftData, 'Индекс по итогам квартала')
-            const rightChartData = calculateIndexCalculationChartData(rightData, 'Прогнозируемый индекс')
+            const leftChartData = calculateIndexCalculationChartData(leftData, 'Индекс по итогам квартала', chartsColor)
+            const rightChartData = calculateIndexCalculationChartData(rightData, 'Прогнозируемый индекс', chartsColor)
 
             setLeftIndex( Math.round( leftData.index * 10) / 10 );
             setRightIndex( Math.round( rightData.index * 10) / 10 );
@@ -110,7 +112,7 @@ const IndexCalculation = () => {
             setHasData(false)
             setIsLoading(false)
         }
-    }, [selectedYear, selectedQuarter, api]);
+    }, [selectedYear, selectedQuarter, api, chartsColor]);
 
 
     useLayoutEffect(() => {
@@ -127,7 +129,7 @@ const IndexCalculation = () => {
         }
         try {
             const response = (await api[chart](selectedYear, selectedQuarter, selectedChartButton)).data;
-            const chartData = calculateIndexCalculationChartData(response, `${chartArray[selectedChartButton - 1]}`);
+            const chartData = calculateIndexCalculationChartData(response, `${chartArray[selectedChartButton - 1]}`, chartsColor);
 
             setBarIndex( Math.round( response.index * 10) / 10 );
             setBarData(chartData);
@@ -203,7 +205,7 @@ const IndexCalculation = () => {
                 console.error(`Error fetching data for ${chartArray[i]}:`, error);
             }
         }
-        const chartData = calculateClickedIndex(responseData, label, chartArray);
+        const chartData = calculateClickedIndex(responseData, label, chartArray, chartsColor);
         setBarIndex( Math.round( sumIndex * 10 / responseData.length) / 10 );
         setBarData(chartData);
     }

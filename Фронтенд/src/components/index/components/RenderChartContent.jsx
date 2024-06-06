@@ -11,12 +11,17 @@ const RenderChartContent = ({ chartType, chartData, index, selectedChart, onClic
                 scales: {
                     y: {
                         min: 0,
-                        max: 100
+                        max: 100,
+                        ticks: {
+                            font: {
+                                size: 17,
+                            },
+                        }
                     },
                     x: {
                         ticks: {
                             font: {
-                                size: 13,
+                                size: 17,
                             },
                             autoSkip: false,
                         }

@@ -34,6 +34,18 @@
     flex-direction: column;
 }
 
+.index__chart__color-buttons {
+    display: flex;
+}
+
+.color-button {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
 .index__content__not-selected {
     position: absolute;
     text-align: center;

@@ -19,6 +19,7 @@
 .aside-content {
     width: 35%;
     background: #f9f9f9;
+    min-height: 70vh;
 }
 
 .main-page-news-title {

@@ -1,5 +1,6 @@
 .footer {
-    background: url("../../../../../images/header_bg.png") repeat;
+    /*background: url("../../../../../images/header_bg.png") repeat;*/
+    background: #2F4F4F;
     color: #FAFAFA;
     padding: 30px 0;
     font-size: 18px;

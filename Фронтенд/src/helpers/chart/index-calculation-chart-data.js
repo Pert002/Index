@@ -1,4 +1,4 @@
-export function calculateIndexCalculationChartData(responseData, label) {
+export function calculateIndexCalculationChartData(responseData, label, color) {
     return {
         labels: [
             'Выручка',
@@ -17,7 +17,7 @@ export function calculateIndexCalculationChartData(responseData, label) {
                 Math.round(responseData.innovation * 10) / 10,
             ],
             backgroundColor: [
-                'rgb(191, 191, 191)'
+                color
             ],
             hoverOffset: 5
         }]

@@ -1,6 +1,6 @@
 .login__menu {
-    background-color: #474747;
-    background: url("../../../images/header_bg.png") repeat;
+    background: #2F4F4F;
+    /*background: url("../../../images/header_bg.png") repeat;*/
     color: #eeeeee;
     min-height: 100vh;
     display: flex;

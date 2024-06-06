@@ -22,7 +22,7 @@ const Footer = () => {
                             Адрес
                         </p>
                         <div className="footer__contacts__item__text">
-                            Улица Пушкина, дом Колотушкина
+                            г. Москва, Покровский бул., 11, стр. 10
                         </div>
                     </div>
                     <div className="footer__contacts__item">

@@ -1,4 +1,4 @@
-export function calculateClickedIndex(responseData, label, labels) {
+export function calculateClickedIndex(responseData, label, labels, color) {
     let data = [];
     for (let i = 0; i < responseData.length; i++) {
         data[i] = Math.round(responseData[i] * 10) / 10
@@ -15,7 +15,7 @@ export function calculateClickedIndex(responseData, label, labels) {
             label,
             data,
             backgroundColor: [
-                'rgb(191, 191, 191)'
+                color
             ],
             hoverOffset: 5
         }]
